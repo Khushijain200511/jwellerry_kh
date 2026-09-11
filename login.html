@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="Slogan" href=".vscode/Screenshot 2026-07-27 172819.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+
+        }
+
+        header {
+
+            /* width:100%; */
+            height: 90px;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+            margin: 20 60px;
+        }
+
+        .search-box {
+            width: 650px;
+            height: 50px;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            background: #fff;
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 17px;
+            padding: 0 15px;
+        }
+
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .icon {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 18px;
+
+        }
+
+        .navbar {
+            background: #fff;
+            padding: 15px 0;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar ul li {
+            position: relative;
+            margin: 0 30px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 10px;
+
+        }
+
+        .navbar ul li a:hover {
+            color: blue;
+            border-bottom: 2px solid blue;
+            padding-bottom: 5px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            background: #fff;
+            min-width: 220px;
+            border-radius: 8px;
+            z-index: 1000;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px 20px;
+            color: #333;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .left {
+            width: 50%;
+            display: flex;
+            gap: 20px;
+        }
+        .sym img{
+         align-items: center;
+         width: 150px;
+            height: auto;
+            margin: 20px 700px;
+            
+
+        }
+        .log{
+
+            margin: 0px 600px;
+            width: 500px;
+        }
+        .checkout{
+    width:50%;
+    margin-top: 80px;
+   
+    
+}
+
+
+.checkout h3{
+    font-size:18px;
+    color:#222;
+    margin-bottom:12px;
+    font-weight:500;
+}
+
+.checkout button{
+    width:60%;
+    height:55px;
+    border:1px solid #8fd0e3;
+    border-radius:10px;
+    background:#fff;
+    color:#8fbfc8;
+    font-size:18px;
+    text-align:left;
+    padding:0 20px;
+    margin-bottom:25px;
+    cursor:pointer;
+    margin: 20px 550px;
+     
+
+}
+.but  button{
+     background:linear-gradient(to right,#f79cbc,#ea6b97);
+    color:#fff;
+    border:none;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    margin-top:30px;
+     flex:1;
+    border:none;
+    outline:none;
+
+}
+
+
+         footer {
+            background: #3b0505;
+            color: white;
+            padding: 60px 80px;
+            margin-top: 60px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        .footer-logo {
+            width: 180px;
+            margin-bottom: 20px;
+        }
+
+        .footer-box h2 {
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+
+        .footer-box a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin: 15px 0;
+            font-size: 20px;
+        }
+
+        .footer-box a:hover {
+            color: gold;
+        }
+
+        .khushi {
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+
+        <div class="logo">
+            <img src=".vscode/Screenshot 2026-07-27 172819.png" alt="Logo">
+        </div>
+
+        <div class="search-box">
+
+            <input type="text" placeholder="Search for rings">
+        </div>
+
+        <div class="header-icons">
+
+            <div class="icon">
+                 <a href="wish.html">
+                <span>Wishlist</span>
+                 </a>
+            </div>
+            <div class="icon">
+                 <a href="cart.html">
+                <span>Cart</span>
+                 </a>
+            </div>
+
+            <div class="icon">
+                 <a href="login.html">
+                <span>Login</span>
+                 </a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <nav class="navbar">
+        <ul>
+
+            <li><a href="jewellery.html">Home</a></li>
+
+            <li class="dropdown">
+                <a href="#">Products</a>
+
+                <div class="dropdown-content">
+                    <a href="rings.html">Rings</a>
+                    <a href="pendant.html">Pendant</a>
+                    <a href="mangalsutra.html">Mangalsutra</a>
+                    <a href="earring.html">Earring</a>
+                    <a href="chain.html">Chains</a>
+                </div>
+            </li>
+
+            <li><a href="about.html">About Us</a></li>
+
+            <li><a href="contact.html">Contact Us</a></li>
+
+        </ul>
+    </nav>
+    <div class="sym">
+        <img src=".vscode/Screenshot 2026-07-27 172819.png" alt="">
+    </div>
+    <div class="log">
+        <p>
+            Login/Signup to get exclusive Tanishq privileges.
+        </p>
+    </div>
+    
+    <div class="checkout">
+
+    
+    <button>Enter the mobile number </button>
+
+    
+    <button>Enter your Email id </button>
+    
+     <button>Password </button>
+     
+     <div class="but">
+        <a href="jewellery.html">
+      <button>Get OTP </button>
+        </a>
+      <a href="jewellery.html">
+       <button>Sign in </button>
+      </a>
+
+       </div>
+     </div>
+    </div>
+    <footer>
+
+            <div class="footer-container">
+                <div class="footer-box">
+
+                    <img src=".vscode/Screenshot 2026-07-27 172819.png" class="footer-logo">
+
+                    <h2>Download the Jewellery App</h2>
+
+                    <div class="store">
+
+                        <img src=".vscode/Screenshot 2026-07-28 123136.png">
+
+                        <img src=".vscode/Screenshot 2026-07-28 123144.png">
+
+                    </div>
+
+                </div>
+
+
+                <div class="footer-box">
+
+                    <h2>Useful Links</h2>
+
+                    <a href="#">Delivery Information</a>
+                    <a href="#">International Shipping</a>
+                    <a href="#">Payment Options</a>
+                    <a href="#">Track Your Order</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Find a Store</a>
+
+                </div>
+                <div class="footer-box">
+
+                    <h2>Information</h2>
+
+                    <a href="#">Blog</a>
+                    <a href="#">Offers</a>
+                    <a href="#">Help & FAQs</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Privacy Policy</a>
+
+                </div>
+
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <h2>Follow Us</h2>
+
+                <p>© 2026 Jewellery Store. All Rights Reserved.</p>
+
+            </div>
+
+        </footer>
+</body>
+
+</html>
+

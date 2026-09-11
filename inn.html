@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewellery</title>
+
+    <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#fff;
+}
+
+.container{
+    width:95%;
+    margin:30px auto;
+    display:flex;
+    gap:40px;
+}
+
+/* Left Side */
+
+.left{
+    width:50%;
+    display:flex;
+    gap:20px;
+}
+
+.thumbnails{
+    width:90px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.thumbnails img{
+    width:80px;
+    height:80px;
+    object-fit:cover;
+    border:1px solid #ddd;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.thumbnails img:hover{
+    border:2px solid #4db7d8;
+}
+
+.main-image{
+    flex:1;
+    border:1px solid #ddd;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.main-image img{
+    width:100%;
+    max-width:550px;
+}
+
+/* Right Side */
+
+.right{
+    width:50%;
+}
+
+.right h1{
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+.price{
+    margin-bottom:20px;
+}
+
+.new-price{
+    font-size:40px;
+    font-weight:bold;
+}
+
+.old-price{
+    margin-left:10px;
+    color:gray;
+    text-decoration:line-through;
+}
+
+.offer{
+    display:flex;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.offer span{
+    background:#e9f7fa;
+    padding:8px 18px;
+    border-radius:20px;
+    color:#0099aa;
+    font-size:15px;
+}
+
+.right h3{
+    margin-bottom:10px;
+}
+
+select{
+    width:100%;
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    margin-bottom:20px;
+    font-size:16px;
+}
+
+.box{
+    background:#eef8fb;
+    padding:25px;
+    border-radius:10px;
+}
+
+.row{
+    margin-bottom:20px;
+}
+
+.row label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.bottom{
+    display:flex;
+    gap:20px;
+    margin-top:30px;
+}
+
+.price-box{
+    width:40%;
+    border:1px solid #ddd;
+    border-radius:40px;
+    text-align:center;
+    padding:15px;
+}
+
+.price-box h2{
+    font-size:34px;
+}
+
+.price-box p{
+    color:gray;
+    margin-top:5px;
+}
+
+button{
+    width:60%;
+    border:none;
+    background:#f277a6;
+    color:white;
+    font-size:26px;
+    border-radius:40px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#e45d91;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.container{
+    flex-direction:column;
+}
+
+.left,
+.right{
+    width:100%;
+}
+
+.bottom{
+    flex-direction:column;
+}
+
+.price-box,
+button{
+    width:100%;
+}
+
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewellery Product Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Left Side -->
+    <div class="left">
+
+        <div class="thumbnails">
+            <img src="ring1.jpg" alt="">
+            <img src="ring2.jpg" alt="">
+            <img src="ring3.jpg" alt="">
+            <img src="hand.jpg" alt="">
+        </div>
+
+        <div class="main-image">
+            <img src="ring1.jpg" alt="">
+        </div>
+
+    </div>
+
+    <!-- Right Side -->
+    <div class="right">
+
+        <h1>The Rebecca Diamond Silver Ring</h1>
+
+        <div class="price">
+            <span class="new-price">₹7,359</span>
+            <span class="old-price">MRP ₹14,146</span>
+        </div>
+
+        <div class="offer">
+            <span>50% on Making Charges</span>
+            <span>50% on Diamond</span>
+        </div>
+
+        <h3>Select Size</h3>
+
+        <select>
+            <option>Select Size</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+        </select>
+
+        <div class="box">
+
+            <div class="row">
+                <label>Silver Color</label>
+                <select>
+                    <option>Select Silver Color</option>
+                    <option>White</option>
+                    <option>Rose Gold</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <label>Silver Purity</label>
+                <select>
+                    <option>92.5</option>
+                    <option>90</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <label>Diamond</label>
+                <select>
+                    <option>Natural</option>
+                    <option>Lab Grown</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="bottom">
+
+            <div class="price-box">
+                <h2>₹7,359</h2>
+                <p>Inclusive of all taxes</p>
+            </div>
+
+            <button>Add to Cart</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

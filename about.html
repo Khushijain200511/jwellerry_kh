@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="Slogan" href=".vscode/Screenshot 2026-07-27 172819.png">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        header{
+            
+    width:100%;
+    height:90px;
+    background:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 40px;
+    
+        }
+
+.logo img{
+    width:150px;
+    height:auto;
+    margin: 20 60px;
+}
+
+.search-box{
+    width:650px;
+    height:50px;
+    border:1px solid #ccc;
+    border-radius:30px;
+    display:flex;
+    align-items:center;
+    padding:0 20px;
+    background:#fff;
+}
+
+.search-box input{
+    flex:1;
+    border:none;
+    outline:none;
+    font-size:17px;
+    padding:0 15px;
+}
+
+
+.header-icons{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.icon{
+    display:flex;
+    align-items:center;
+    cursor:pointer;
+}
+.search-box input{
+    flex:1;
+    border:none;
+    outline:none;
+    font-size:18px;
+   
+}
+        .navbar{
+    background:#fff;
+    padding:15px 0;
+}
+
+.navbar ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.navbar ul li{
+    position:relative;
+    margin:0 30px;
+}
+
+.navbar ul li a{
+    text-decoration:none;
+    color:#333;
+    font-size:18px;
+    font-weight:600;
+    padding:10px;
+    
+}
+
+.navbar ul li a:hover{
+    color:blue;
+    border-bottom:2px solid blue;
+    padding-bottom:5px;
+}
+.dropdown-content{
+    display:none;
+    position:absolute;
+    top:100%;
+    background:#fff;
+    min-width:220px;
+    border-radius:8px;
+    z-index:1000;
+}
+
+.dropdown-content a{
+    display:block;
+    padding:12px 20px;
+    color:#333;
+}
+
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+
+       
+
+        .about{
+            padding:60px;
+            text-align:center;
+        }
+
+        .about h1{
+            font-size:40px;
+            margin-bottom:20px;
+        }
+
+        .para{
+            font-size:18px;
+            width:95%;
+            margin: 20px 70px;;
+            text-align:start;
+
+        }
+        .vision-image{
+width: 20%;
+}
+
+.vision-image img{
+width:200%;
+height: auto;
+border-radius:10px;
+padding: 0px 80px;
+text-align:center;
+margin:  20px 320px;
+}
+.Vision{
+justify-content:space-between;
+text-align:center;
+padding: 100px 200px;
+width: 95%;
+
+}
+
+.box{
+    display:flex;
+    justify-content:center;}
+.text{
+    justify-content:center;
+    margin: 10px 800px;
+}    
+
+.vision-text{
+justify-content:center;
+padding: 0px 800px;
+width: 123%;
+margin: 0px 0px;
+
+}
+
+.vision-text h2{
+margin-bottom:50px 100px;
+padding: 50px 600px;
+}
+
+
+
+        .mission{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:50px;
+
+}
+
+.mission-text{
+width:90%;
+padding: 0px 30px;
+margin: 50px;
+}
+
+.mission-text h2{
+margin-bottom:15px;
+}
+
+.mission-image{
+width:95%;
+height: auto;
+}
+
+.mission-image img{
+width:70%;
+height: auto;
+border-radius:10px;
+margin: 0px 100px;
+}
+.Network-text{
+width:95%;
+padding: 40px; 
+margin: 0px 100px;
+}
+
+.Network-text h2{
+margin-bottom:10px;
+padding: 0;
+width: 0% 60%;
+}
+
+.Network-image{
+width:95%;
+height: auto;
+margin: 0px 100px;
+}
+
+.Network-image img{
+width:95%;
+height: auto;
+border-radius:10px;
+}
+
+footer{
+    background:#3b0505;
+    color:white;
+    padding:60px 80px;
+    margin-top:60px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:50px;
+}
+
+.footer-logo{
+    width:180px;
+    margin-bottom:20px;
+}
+
+.footer-box h2{
+    margin-bottom:20px;
+    font-size:32px;
+}
+
+.footer-box a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    margin:15px 0;
+    font-size:20px;
+}
+
+.footer-box a:hover{
+    color:gold;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+       
+
+    <div class="logo">
+        <img src=".vscode/Screenshot 2026-07-27 172819.png" alt="Logo">
+    </div>
+
+    <div class="search-box">
+       
+        <input type="text" placeholder="Search for rings">
+    </div>
+
+    <div class="header-icons">
+
+        <div class="icon"> 
+             <a href="wish.html">
+            <span>Wishlist</span>
+             </a>
+        </div>
+   <div class="icon">
+         <a href="cart.html">
+            <span>Cart</span>
+         </a>
+        </div>
+
+        <div class="icon">
+             <a href="login.html">
+            <span>Login</span>
+             </a>
+        </div>
+
+    </div>
+
+</header>
+
+    <nav class="navbar">
+    <ul>
+
+        <li><a href="jewellery.html">Home</a></li>
+
+        <li class="dropdown">
+            <a href="#">Products</a>
+
+            <div class="dropdown-content">
+                <a href="rings.html">Rings</a>
+                <a href="pendant.html">Pendant</a>
+                <a href="mangalsutra.html">Mangalsutra</a>
+                <a href="earring.html">Earring</a>
+                <a href="chain.html">Chains</a>
+            </div>
+        </li>
+
+        <li><a href="about.html">About Us</a></li>
+
+        <li><a href="contact.html">Contact Us</a></li>
+
+    </ul>
+</nav>
+
+<section class="about">
+    <h1>About Us</h1>
+    <div class="para">
+    <p>
+        Welcome to ShopEase. We provide high-quality products at affordable
+        prices with fast delivery and secure online shopping. Our mission is
+        to make shopping easy, convenient, and enjoyable for everyone.
+        Jewellery may be attached to the body or the clothes. From a Western perspective, 
+        the term is restricted to 
+        durable ornaments, excluding flowers for example. For many centuries, metals such as gold and silver,
+        often combined with gemstones, have been the normal material for jewellery. Other materials such as glass,
+        shells, or wood may also be used.
+    </p>
+</div>
+</section>
+
+
+<section class="vision">
+<div class="box">
+<div class="vision-image">
+<img src=".vscode/Screenshot 2026-07-31 120908.png" alt="Mission">
+</div>
+<div class="con">
+    <div class="text">
+<h2>Our vision</h2>
+    </div>
+<p class="vision-text">
+Our vision is Python, AI, and software
+development through practical projects and real-world experience.Jewellery (or jewelry in American English) consists of 
+decorative items worn for personal adornment such as brooches, rings, necklaces, earrings, pendants, bracelets, and 
+cufflinks. Jewellery may be attached to the body or the clothes. From a Western perspective, the term is restricted to 
+durable ornaments, excluding flowers for example. For many centuries, metals such as gold and silver, often combined 
+
+</p>
+</div>
+</div>
+
+ <section class="mission">
+
+<div class="mission-text">
+
+<h2>Our Mission</h2>
+
+<p>
+Our mission is to provide quality education and modern technology solutions.
+We help students and businesses learn web development, Python, AI, and software
+development through practical projects and real-world experience.Jewellery (or jewelry in American English) consists of 
+decorative items worn for personal adornment such as brooches, rings, necklaces, earrings, pendants, bracelets, and 
+cufflinks. Jewellery may be attached to the body or the clothes. From a Western perspective, the term is restricted to 
+durable ornaments, excluding flowers for example. For many centuries, metals such as gold and silver, often combined 
+
+with gemstones, have been the normal material for jewellery. Other materials such as glass, shells, or wood may also
+ be used.
+
+
+
+</p>
+
+</div>
+
+<div class="mission-image">
+
+<img src=".vscode/Screenshot 2026-07-31 120908.png" alt="Mission">
+
+</div>
+ </section>
+ <section class="our Network">
+
+<div class="Network-text">
+
+<h2>Our Network</h2>
+
+<p>
+With over 316 showrooms, Kalyan Jewellers is spread across India, the Middle East and USA.
+
+
+India
+We have a strong presence across 21 states and union territories, and our 278-plus network of showrooms cover all
+major cities. Moreover, the 'My Kalyan' hub-and-spoke model outlets, act as Customer Service Centers, ensuring Kalyan 
+Jewellers is more accessible to households in rural areas.
+OVERSEAS
+As on March 31, 2025, we have 36 showrooms in the GCC spread across UAE, Qatar, Kuwait and Oman and 1 showroom in the USA.
+
+</p>
+
+</div>
+
+<div class="Network-image">
+
+<img src=".vscode/Screenshot 2026-07-29 104513.png" alt="Mission">
+
+</div>
+ </section>
+ <footer>
+
+    <div class="footer-container">
+        <div class="footer-box">
+
+            <img src=".vscode/Screenshot 2026-07-27 172819.png" class="footer-logo">
+
+            <h2>Download the Jewellery App</h2>
+
+            <div class="store">
+
+                <img src=".vscode/Screenshot 2026-07-28 123136.png">
+
+                <img src=".vscode/Screenshot 2026-07-28 123144.png">
+
+            </div>
+
+        </div>
+        <div class="footer-box">
+
+            <h2>Useful Links</h2>
+
+            <a href="#">Delivery Information</a>
+            <a href="#">International Shipping</a>
+            <a href="#">Payment Options</a>
+            <a href="#">Track Your Order</a>
+            <a href="#">Returns</a>
+            <a href="#">Find a Store</a>
+
+        </div>
+        <div class="footer-box">
+
+            <h2>Information</h2>
+
+            <a href="#">Blog</a>
+            <a href="#">Offers</a>
+            <a href="#">Help & FAQs</a>
+            <a href="#">About Us</a>
+            <a href="#">Privacy Policy</a>
+
+        </div>
+        
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <h2>Follow Us</h2>
+
+        <p>© 2026 Jewellery Store. All Rights Reserved.</p>
+
+    </div>
+
+</footer>
+</body>
+</html>

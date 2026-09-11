@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Royal Festive Rope Textured Gold Chain - Chains Collection</title>
+    <link rel="icon" href=".vscode/Screenshot 2026-07-27 172819.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #fff;
+            color: #333;
+        }
+
+        header {
+            height: 90px;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .search-box {
+            width: 650px;
+            height: 50px;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            background: #fff;
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 17px;
+            padding: 0 15px;
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .header-icons .icon a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .header-icons .icon a:hover {
+            color: #0099aa;
+        }
+
+        .navbar {
+            background: #fff;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar ul li {
+            position: relative;
+            margin: 0 30px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .navbar ul li a:hover,
+        .navbar ul li a.active {
+            color: #0099aa;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            min-width: 180px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            z-index: 1000;
+            overflow: hidden;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 15px;
+            font-weight: 500;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f8f9fa;
+            color: #0099aa;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .breadcrumb {
+            width: 90%;
+            margin: 20px auto 10px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .breadcrumb a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: #0099aa;
+        }
+
+        .breadcrumb span {
+            color: #12395d;
+            font-weight: 600;
+        }
+
+        .product-page-container {
+            width: 90%;
+            margin: 20px auto 40px;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .gallery-side {
+            width: 50%;
+            display: flex;
+            gap: 15px;
+        }
+
+        .thumbnails {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 90px;
+        }
+
+        .thumbnails img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 2px solid #eee;
+            transition: 0.2s;
+        }
+
+        .thumbnails img:hover,
+        .thumbnails img.active-thumb {
+            border-color: #12395d;
+            transform: scale(1.03);
+        }
+
+        .main-image {
+            flex: 1;
+            background: #fdfdfd;
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #eee;
+            max-height: 560px;
+        }
+
+        .main-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+
+        .info-side {
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .info-side h1 {
+            font-size: 32px;
+            color: #112d4e;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+
+        .price-section {
+            display: flex;
+            align-items: baseline;
+            gap: 15px;
+        }
+
+        .new-price {
+            font-size: 34px;
+            font-weight: bold;
+            color: #12395d;
+        }
+
+        .old-price {
+            font-size: 22px;
+            color: #888;
+            text-decoration: line-through;
+        }
+
+        .offer {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            background: #eef7f9;
+            padding: 14px 18px;
+            border-radius: 8px;
+            border-left: 4px solid #14799e;
+        }
+
+        .offer span {
+            font-size: 15px;
+            color: #12395d;
+            font-weight: 600;
+        }
+
+        .size-box {
+            margin-top: 10px;
+        }
+
+        .section-label {
+            font-weight: 600;
+            font-size: 16px;
+            color: #222;
+            margin-bottom: 8px;
+        }
+
+        .size-box select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            background: #fff;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .custom-box {
+            border: 1px solid #eee;
+            border-radius: 12px;
+            padding: 20px;
+            background: #fafafa;
+        }
+
+        .custom-box h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        .product-item {
+            margin-bottom: 15px;
+        }
+
+        .product-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .product-item .title {
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #444;
+        }
+
+        .product-item .stock {
+            color: #28a745;
+            font-size: 13px;
+        }
+
+        .product-item select {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 15px;
+            background: #fff;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .delivery {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .delivery-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .delivery-title h2 {
+            font-size: 18px;
+            color: #222;
+        }
+
+        .delivery-title a {
+            color: #d9534f;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .pincode-box {
+            display: flex;
+            gap: 10px;
+        }
+
+        .pincode-box input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .pincode-box button {
+            background: #12395d;
+            color: #fff;
+            border: none;
+            padding: 0 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .pincode-box button:hover {
+            background: #002244;
+        }
+
+        .pincode-result {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .bottom-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #fdf5e6;
+            border: 1px solid #f0e0c0;
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+
+        .price-box h2 {
+            font-size: 28px;
+            color: #12395d;
+        }
+
+        .price-box p {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .cart-btn {
+            background: #d9534f;
+            color: white;
+            padding: 16px 36px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .cart-btn:hover {
+            background: #c9302c;
+            transform: translateY(-2px);
+        }
+
+        .browse-rings-box {
+            background: #f7f9fa;
+            border: 1px dashed #b8c8d8;
+            padding: 14px 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 15px;
+        }
+
+        .browse-rings-box a {
+            color: #d9534f;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .browse-rings-box a:hover {
+            text-decoration: underline;
+        }
+
+        .details-section {
+            width: 90%;
+            margin: 50px auto 40px;
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+            background: #fdfdfd;
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid #f0f0f0;
+        }
+
+        .lefts {
+            width: 65%;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 30px;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 25px;
+        }
+
+        .tabs a {
+            text-decoration: none;
+            color: #666;
+            font-size: 18px;
+            padding-bottom: 14px;
+            font-weight: 600;
+        }
+
+        .tabs .active {
+            color: #000;
+            border-bottom: 3px solid #33b7e8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table tr {
+            border-bottom: 1px solid #eee;
+        }
+
+        table td {
+            padding: 16px 10px;
+            font-size: 18px;
+        }
+
+        table td:last-child {
+            text-align: right;
+            font-weight: 500;
+        }
+
+        .totals td {
+            font-weight: bold;
+            font-size: 22px;
+            color: #001b44;
+            padding-top: 20px;
+        }
+
+        .notes {
+            margin-top: 25px;
+            color: #777;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .rights {
+            width: 35%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-left: 1px solid #eee;
+            padding-left: 30px;
+        }
+
+        .rights img {
+            width: 80%;
+            max-width: 250px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .rights p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #12395d;
+        }
+
+        .banner-wrap {
+            width: 90%;
+            margin: 40px auto;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .banner-wrap img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .recommend {
+            width: 90%;
+            margin: 50px auto;
+        }
+
+        .recommend h2 {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .recommend h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #32b8d8;
+            margin: 12px auto 35px;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            padding: 15px;
+            position: relative;
+            transition: .3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            text-align: center;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .1);
+            transform: translateY(-5px);
+        }
+
+        .heart {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            width: 32px;
+            height: 32px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: #2ea7c7;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin: 12px 0 8px;
+            font-weight: 600;
+            color: #002244;
+            line-height: 1.3;
+        }
+
+        .card .new {
+            font-size: 18px;
+            font-weight: bold;
+            color: #222;
+        }
+
+        .card p {
+            color: #0d718f;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        footer {
+            background: #3b0505;
+            color: white;
+            padding: 60px 80px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        .footer-logo {
+            width: 180px;
+            margin-bottom: 20px;
+        }
+
+        .footer-box h2 {
+            margin-bottom: 20px;
+            font-size: 26px;
+        }
+
+        .footer-box a {
+            display: block;
+            color: #eee;
+            text-decoration: none;
+            margin: 12px 0;
+            font-size: 17px;
+            transition: 0.2s;
+        }
+
+        .footer-box a:hover {
+            color: gold;
+        }
+
+        .store {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .store img {
+            height: 45px;
+            cursor: pointer;
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            text-align: center;
+            font-size: 15px;
+            color: #ccc;
+        }
+
+        @media (max-width: 1024px) {
+            .product-page-container {
+                flex-direction: column;
+            }
+            .gallery-side, .info-side {
+                width: 100%;
+            }
+            .product-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="jewellery.html">
+                <img src=".vscode/Screenshot 2026-07-27 172819.png" alt="Logo">
+            </a>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search for chains, jewellery...">
+        </div>
+
+        <div class="header-icons">
+            <div class="icon">
+                <a href="wish.html">
+                    <span>♡</span>
+                    <span>Wishlist</span>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="cart.html">
+                    <span>🛒</span>
+                    <span>Cart</span>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="login.html">
+                    <span>👤</span>
+                    <span>Login</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="jewellery.html">Home</a></li>
+            <li class="dropdown">
+                <a href="chain.html" class="active">Products</a>
+                <div class="dropdown-content">
+                    <a href="rings.html">Rings</a>
+                    <a href="pendant.html">Pendant</a>
+                    <a href="mangalsutra.html">Mangalsutra</a>
+                    <a href="earring.html">Earring</a>
+                    <a href="chain.html">Chains</a>
+                </div>
+            </li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="breadcrumb">
+        <a href="jewellery.html">Home</a> &nbsp;/&nbsp;
+        <a href="chain.html">Chains</a> &nbsp;/&nbsp;
+        <span>The Royal Festive Rope Textured Gold Chain</span>
+    </div>
+
+    <div class="product-page-container">
+        <div class="gallery-side">
+            <div class="thumbnails">
+                <img src=".vscode/Screenshot 2026-07-28 105322.png" alt="Thumbnail 1" class="active-thumb" onclick="changeImage(this)">
+                <img src=".vscode/Screenshot 2026-07-27 124603.png" alt="Thumbnail 2" class="" onclick="changeImage(this)">
+                <img src=".vscode/Screenshot 2026-07-28 105438.png" alt="Thumbnail 3" class="" onclick="changeImage(this)">
+                <img src=".vscode/Screenshot 2026-07-28 105021.png" alt="Thumbnail 4" class="" onclick="changeImage(this)">
+            </div>
+
+            <div class="main-image">
+                <img id="mainProductImg" src=".vscode/Screenshot 2026-07-28 105322.png" alt="The Royal Festive Rope Textured Gold Chain">
+            </div>
+        </div>
+
+        <div class="info-side">
+            <h1>The Royal Festive Rope Textured Gold Chain</h1>
+
+            <div class="price-section">
+                <span class="new-price">₹42,700</span>
+                <span class="old-price">MRP ₹60,000</span>
+            </div>
+
+            <div class="offer">
+                <span>29% Festive Auspicious Offer</span>
+                <span>Complimentary Luxury Velvet Jewellery Box Included</span>
+            </div>
+
+            <div class="size-box">
+                <div class="section-label">Select Chain Length & Thickness</div>
+                <select>
+                    <option>20 Inches (3.5mm Rope)</option>
+                    <option>22 Inches (3.5mm Rope)</option>
+                    <option>24 Inches (4.2mm Heavy Rope) (+₹8,500)</option>
+                </select>
+            </div>
+
+            <div class="custom-box">
+                <h2>Customise Product</h2>
+
+                <div class="product-item">
+                    <div class="title">
+                        <span>Gold Tone & Purity</span>
+                        <span class="stock">In stock</span>
+                    </div>
+                    <select>
+                        <option>22KT Yellow Gold (Heavy Solid)</option>
+                        <option>18KT Rose Gold</option>
+                    </select>
+                </div>
+
+                <div class="product-item">
+                    <div class="title">
+                        <span>Stone & Diamond Details</span>
+                        <span class="stock">In stock</span>
+                    </div>
+                    <select>
+                        <option>Diamond-Cut Spiral Rope Facets</option>
+                        <option>High Gloss Twisted Rope</option>
+                    </select>
+                </div>
+
+                <div class="product-item">
+                    <div class="title">
+                        <span>Clasp Design</span>
+                        <span class="stock">In stock</span>
+                    </div>
+                    <select>
+                        <option>Heavy Spring Ring with Safety Catch</option>
+                        <option>Traditional Barrel Clasp</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="delivery">
+                <div class="delivery-title">
+                    <h2>Check Delivery Date</h2>
+                    <a href="javascript:void(0)" onclick="document.getElementById('pincodeInput').value='110001'; checkPincode();">Locate me</a>
+                </div>
+                <div class="pincode-box">
+                    <input type="text" id="pincodeInput" placeholder="Enter 6-digit Pincode">
+                    <button onclick="checkPincode()">CHECK</button>
+                </div>
+                <div id="pincodeResult" class="pincode-result"></div>
+            </div>
+
+            <div class="bottom-bar">
+                <div class="price-box">
+                    <h2>₹42,700</h2>
+                    <p>(inclusive of all taxes)</p>
+                </div>
+                <button class="cart-btn" onclick="alert('The Royal Festive Rope Textured Gold Chain added to cart!')">Add to Cart</button>
+            </div>
+
+            <div class="browse-rings-box">
+                <span>Explore full Chains catalog?</span>
+                <a href="chain.html">View All Chains &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="details-section">
+        <div class="lefts">
+            <div class="tabs">
+                <a href="javascript:void(0)" class="active">PRICE BREAKUP</a>
+                <a href="javascript:void(0)">PRODUCT DETAILS</a>
+                <a href="javascript:void(0)">SPECIFICATIONS</a>
+                <a href="javascript:void(0)">CERTIFICATION</a>
+            </div>
+
+            <table>
+                <tr>
+                    <td>Gold (22KT Yellow Gold, 6.8g):</td>
+                    <td>₹34,000</td>
+                </tr>
+                <tr>
+                    <td>Stones / Diamonds (Spiral Diamond-Cut Facets):</td>
+                    <td>₹2,200</td>
+                </tr>
+                <tr>
+                    <td>Artisanal Making & Craftsmanship:</td>
+                    <td>₹5,256</td>
+                </tr>
+                <tr>
+                    <td>GST (3%):</td>
+                    <td>₹1,244</td>
+                </tr>
+                <tr class="totals">
+                    <td>Total Price:</td>
+                    <td>₹42,700</td>
+                </tr>
+            </table>
+
+            <p class="notes">
+                * Laser inscribed with official hallmarking and certification identifier. Complies with BIS standards. Free transit insurance provided on all deliveries.
+            </p>
+        </div>
+
+        <div class="rights">
+            <img src=".vscode/Screenshot 2026-07-28 105322.png" alt="The Royal Festive Rope Textured Gold Chain Guarantee">
+            <p>
+                Buy The Royal Festive Rope Textured Gold Chain with 100% BIS Hallmarked 22KT Gold, Heavy Lock Security & Lifetime Buyback Guarantee.
+            </p>
+        </div>
+    </div>
+
+    <div class="banner-wrap">
+        <img src=".vscode/Screenshot 2026-08-05 143235.png" alt="Promotional Banner">
+    </div>
+
+    <section class="recommend">
+        <h2>YOU MAY ALSO LIKE</h2>
+        <div class="product-container">
+            <a href="chain-unique.html" class="card">
+                <span class="heart">♡</span>
+                <img src=".vscode/Screenshot 2026-07-28 105249.png" alt="Byzantine Heavy Gold Chain">
+                <h3>Byzantine Heavy Gold Chain</h3>
+                <span class="new">₹74,500</span>
+                <p>Byzantine</p>
+            </a>
+            <a href="chain-bride.html" class="card">
+                <span class="heart">♡</span>
+                <img src=".vscode/Screenshot 2026-07-28 105054.png" alt="Bridal Temple Choker Chain">
+                <h3>Bridal Temple Choker Chain</h3>
+                <span class="new">₹89,000</span>
+                <p>Bridal</p>
+            </a>
+            <a href="chain-minimal.html" class="card">
+                <span class="heart">♡</span>
+                <img src=".vscode/Screenshot 2026-07-28 105438.png" alt="Classic Italian Curb Chain">
+                <h3>Classic Italian Curb Chain</h3>
+                <span class="new">₹28,900</span>
+                <p>Italian curb</p>
+            </a>
+            <a href="chain-sublime.html" class="card">
+                <span class="heart">♡</span>
+                <img src=".vscode/Screenshot 2026-07-28 105010.png" alt="Box Link Heavy Chain">
+                <h3>Box Link Heavy Chain</h3>
+                <span class="new">₹48,300</span>
+                <p>Box link</p>
+            </a>
+        </div>
+    </section>
+
+    <div class="banner-wrap">
+        <img src=".vscode/Screenshot 2026-08-05 143816.png" alt="Jewellery Collection Banner">
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-box">
+                <img src=".vscode/Screenshot 2026-07-27 172819.png" class="footer-logo" alt="Footer Logo">
+                <h2>Download the Jewellery App</h2>
+                <div class="store">
+                    <img src=".vscode/Screenshot 2026-07-28 123136.png" alt="Google Play">
+                    <img src=".vscode/Screenshot 2026-07-28 123144.png" alt="App Store">
+                </div>
+            </div>
+
+            <div class="footer-box">
+                <h2>Useful Links</h2>
+                <a href="Delivery.html">Delivery Information</a>
+                <a href="#">International Shipping</a>
+                <a href="payment.html">Payment Options</a>
+                <a href="track.html">Track Your Order</a>
+                <a href="return.html">Returns</a>
+                <a href="find.html">Find a Store</a>
+            </div>
+
+            <div class="footer-box">
+                <h2>Information</h2>
+                <a href="blog.html">Blog</a>
+                <a href="offers.html">Offers</a>
+                <a href="help.html">Help & FAQs</a>
+                <a href="about.html">About Us</a>
+                <a href="pri.html">Privacy Policy</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Jewellery Store. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function changeImage(el) {
+            document.getElementById('mainProductImg').src = el.src;
+            document.querySelectorAll('.thumbnails img').forEach(img => img.classList.remove('active-thumb'));
+            el.classList.add('active-thumb');
+        }
+
+        function checkPincode() {
+            const pin = document.getElementById('pincodeInput').value.trim();
+            const result = document.getElementById('pincodeResult');
+            if (/^\d{6}$/.test(pin)) {
+                result.innerHTML = `<span style="color: #28a745; font-weight: 600;">✓ Delivery available within 3-4 business days for PIN ${pin} (Free Insured Delivery)</span>`;
+            } else {
+                result.innerHTML = `<span style="color: #d9534f; font-weight: 500;">Please enter a valid 6-digit postal pincode.</span>`;
+            }
+        }
+    </script>
+</body>
+
+</html>

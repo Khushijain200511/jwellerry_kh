@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewellery</title>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+       
+
+        .header {
+            width: 100%;
+            height: 80px;
+            background-color: #d9d9d9;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 30px;
+        }
+.logo{
+   
+   margin: 20px;
+    width: 30p;
+    
+}
+        .logo-box {
+            width: 20px;
+            height: 60px;
+            background-color: black;
+            color: white;
+             margin: 90px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 20px;
+            font-weight: bold;
+
+        }
+
+        .logo-subtitle {
+            font-size: 11px;
+        }
+
+        @media (max-width: 768px) {
+
+            .header {
+                height: 70px;
+                padding: 0 15px;
+            }
+            .navbar{
+                display: none;
+            }
+            
+            .menu-icon {
+                display: block;
+            }
+
+            .logo-box {
+                width: 45px;
+                height: 55px;
+            }
+
+            .logo-name {
+                font-size: 15px;
+            }
+
+            .logo-subtitle {
+                font-size: 8px;
+            }
+
+        }
+        
+       
+
+         .header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+ .icon{
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+        }
+
+.menu-icon {
+    width: 35px;
+    height: 35px;
+    border: 3px solid black;
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.menu-icon span {
+    width: 18px;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+}
+
+        
+
+        .login {
+            width: 35px;
+            height: 35px;
+            border: 3px solid black;
+            border-radius: 50%;
+            position: relative;
+            margin-left: 20%;
+        }
+
+        .head {
+            width: 9px;
+            height: 9px;
+            background-color: black;
+            border-radius: 50%;
+
+            position: absolute;
+            top: 5px;
+            left: 10px;
+        }
+
+        .body {
+            width: 19px;
+            height: 9px;
+            background-color: black;
+            border-radius: 10px 10px 5px 5px;
+
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+        }
+
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+
+        }
+
+
+        .navbar .logo {
+            margin-right: auto;
+        }
+
+        .navbar .logo img {
+            width: 150px;
+            height: 65px;
+            object-fit: contain;
+
+        }
+
+
+        .navbar ul li {
+            margin: 0 25px;
+
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #222;
+            font-size: 16px;
+            font-weight: 500;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .navbar ul li a:hover {
+            color: blue;
+            border-bottom: 2px solid blue;
+            padding-bottom: 5px;
+        }
+
+         
+     @media screen and (max-width: 600px) {
+
+    .hero-section {
+        width: 95%;
+        margin: 20px auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .big-card {
+        height: 400px;
+    }
+
+    .small-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .small-card {
+        height: 300px;
+    }
+
+    .big-card .content h1 {
+        font-size: 30px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .small-card .content h2 {
+        font-size: 24px;
+    }
+
+    .content button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}  
+@media screen and (max-width: 425px) {
+
+    .hero-section {
+        width: 95%;
+        margin: 15px auto;
+        display: grid;
+        grid-template-columns: 1fr !important;
+        gap: 12px;
+    }
+    .big-card {
+        width: 100%;
+        height: 350px;
+    }
+    .small-cards {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 12px;
+    }
+
+    .small-card {
+        width: 100%;
+        height: 200px;
+    }
+    .big-card .content h1 {
+        font-size: 28px;
+    }
+
+    .content p {
+        font-size: 12px;
+    }
+
+    .content button {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+    .small-card .content h2 {
+        font-size: 20px;
+    }
+
+    }
+       
+   
+        /* .hero-section {
+            width: 100%;
+            margin: 30px auto;
+
+            display: grid;
+            grid-template-columns: 1.5fr 1.5fr;
+            gap: 15px;
+        } */
+
+        .big-card {
+            height: 560px;
+            position: relative;
+
+        }
+
+        .big-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(50%);
+        }
+
+        .small-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .small-card {
+            height: 272px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .small-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(50%);
+        }
+
+        .content {
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            left: 10%;
+            width: 85%;
+            text-align: center;
+            color: white;
+            
+        }
+       
+        .big-card .content h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .small-card .content h2 {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            font-size: 16px;
+
+        }
+
+        .content button {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 10px 15px;
+            font-size: 15px;
+            cursor: pointer;
+           
+        }
+
+        .content button:hover {
+            background: white;
+            color: black;
+        }
+    
+    
+    
+        .men {
+            width:100%;
+            margin: 20px 70px;
+            gap: 20px;
+
+        }
+
+        .pass {
+            margin: 10px 0px;
+            gap: 20px;
+        }
+.men {
+    width: 100%;
+    padding: 10px 30px;
+    box-sizing: border-box;
+}
+
+.men h1 {
+    font-size: 32px;
+    margin: 0 0 8px;
+}
+
+.pass {
+    font-size: 16px;
+    margin: 0 0 10px;
+}
+.imm {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    width: 100%;
+}
+
+.imm img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+
+@media (max-width: 600px) {
+
+    .men {
+        padding: 20px 15px;
+       
+    }
+
+    .men h1 {
+        font-size: 25px;
+        margin-bottom: 8px;
+    }
+
+    .pass {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+
+    .imm {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+       
+    }
+
+    .imm img {
+        width: 300px;
+        height: 600px;
+        object-fit: cover;
+    }
+
+    .imm img:last-child {
+        grid-column: auto;
+    }
+}
+@media (max-width: 400px) {
+
+    .men {
+        padding: 15px 12px;
+        
+    }
+
+    .men h1 {
+        font-size: 23px;
+    }
+
+    .pass {
+        font-size: 13px;
+    }
+
+    .imm {
+        gap: 8px;
+      
+    }
+
+    .imm img {
+        height: 500px;
+        width: 300px;
+    }
+}
+
+
+       
+         @media screen and (max-width: 1024px) {
+    .image-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+
+    
+}
+
+        @media screen and (max-width: 992px) {
+            .image-container {
+                flex: 50%;
+                width: 100%;
+                height: auto;
+
+            }
+        }
+
+        @media screen and (max-width: 420px) {
+            .image-container {
+                flex-direction: column;
+                width: 100%;
+                height: auto;
+
+            }
+        }
+
+            .image-container {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                gap: 15px;
+
+            }
+
+            .navbar .image-container {
+                flex: 25%;
+
+            }
+
+            .image-container {
+                display: flex;
+                flex-wrap: wrap;
+
+            }
+            
+
+
+            .image-container img {
+                width: 210px;
+                height: 300px;
+                object-fit: cover;
+            }
+
+            .products {
+                width: 90%;
+
+                margin: 50px auto;
+                display: grid;
+                grid-template-columns:repeat(1fr 1fr) ;
+                gap: 50px;
+                align-items: center;
+            }
+
+
+            .product-text {
+                padding: 20px;
+            }
+
+            .product-text h1 {
+                font-size: 32px;
+                margin-bottom: 20px;
+                color: black;
+            }
+
+            .product-text p {
+                font-size: 14px;
+                line-height: 1.5;
+                margin-bottom: 25px;
+                color: #222;
+            }
+
+            .product-images {
+                display: grid;
+                grid-template-columns:repeat(1fr 1fr);
+                gap: 15px;
+            }
+
+            .product-card {
+                height: 365px;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .product-card img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+            .image-text {
+                position: absolute;
+
+                top: 50%;
+                left: 10%;
+                width: 90%;
+
+                text-align: center;
+
+                color: black;
+
+                z-index: 2;
+            }
+
+            .image-text h2 {
+                font-size: 30px;
+                margin-bottom: 15px;
+            }
+
+            .image-text p {
+                font-size: 14px;
+            }
+            @media (max-width: 425px) {
+
+  .products-text {
+    padding: 25px 18px;
+  }
+
+  .products-text h1 {
+    font-size: 27px;
+    margin-bottom: 18px;
+  }
+
+  .products-text p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .products-images {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1px);
+     gap: 8px;
+  }
+
+  .image-text h2 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 400px) {
+
+  .products-text {
+    padding: 22px 15px;
+  }
+
+  .products-text h1 {
+    font-size: 24px;
+  }
+  .products-images {
+    grid-template-rows: repeat(4, 1px);
+  }
+
+   .image-text h2 {
+    font-size: 23px;
+  }
+
+   .image-text p {
+    font-size: 13px;
+  }
+}
+
+
+            .footer {
+                background-color: #1f1f1f;
+                color: white;
+                padding: 25px 50px;
+                font-family: Arial, sans-serif;
+            }
+
+            .footer-container {
+                max-width: 1200px;
+                margin: auto;
+                display: grid;
+                grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr;
+                gap: 50px;
+            }
+
+            .logo {
+                display: flex;
+                align-items: center;
+                margin-bottom: 18px;
+
+            }
+
+            .logo h2 {
+                font-size: 17px;
+                margin: 0 0 2px 5px;
+            }
+
+            .logo span {
+                font-size: 9px;
+                margin-left: 5px;
+            }
+
+            .company p {
+                font-size: 13px;
+                margin: 17px 0;
+                color: #ddd;
+            }
+
+            .company strong {
+                color: white;
+                font-size: 15px;
+            }
+
+            .footer-column h3 {
+                font-size: 15px;
+                margin: 0 0 18px;
+            }
+
+            .footer-column a {
+                display: block;
+                text-decoration: none;
+                color: #ddd;
+                font-size: 13px;
+                margin-bottom: 17px;
+            }
+
+            .footer-column a:hover {
+                color: white;
+            }
+
+             @media (max-width: 768px) {
+      .footer {
+        padding: 30px 20px;
+      }
+
+      .footer-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .footer-column h3 {
+        margin-bottom: 12px;
+        font-size: 16px;
+      }
+      .footer-column p,
+      .footer-column a {
+        font-size: 14px;
+        margin-bottom: 9px;
+      }
+    }
+    @media (max-width: 400px) {
+      .footer {
+        padding: 25px 15px;
+      }
+
+      .footer-container {
+        gap: 20px;
+      }
+    }
+        
+    </style>
+    </head>
+
+    <body>
+
+
+        <div class="header">
+            <div class="logo">
+                <img src=".vscode/Group_203-removebg-preview.png" alt="Logo">
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="jewellery.html">Home</a></li>
+                    <li><a href="jewellery.html">Men's</a></li>
+                    <li><a href="jewellery.html">Women's</a></li>
+                    <li><a href="jewellery.html">Kid's</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    
+                    
+                </ul>
+            </nav>
+            <div class="icon">
+             <div class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+   </div>
+
+            <div class="user-icon">
+                <img src="ix_user-profile-filled-removebg-preview.png" alt="User">
+            </div>
+            </div>
+        </div>
+        <section class="hero-section">
+            <div class="big-card">
+                <img src="Group 296.jpg" alt="">
+
+                <div class="content">
+                    <h1>We Are Hexashop</h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing
+                        and typesetting industry.
+                    </p>
+                    <button>Purchase Now</button>
+                </div>
+            </div>
+            <div class="small-cards">
+
+                <div class="small-card">
+                    <img src="Group 296.jpg" alt="">
+                    <div class="content">
+                        <h2>Women</h2>
+                        <p>Lorem Ipsum is simply dummy</p>
+                        <button>Discover More</button>
+                    </div>
+                </div>
+
+                <div class="small-card">
+                    <img src="Group 296.jpg" alt="">
+                    <div class="content">
+                        <h2>Men</h2>
+                        <p>Lorem Ipsum is simply dummy</p>
+                        <button>Discover More</button>
+                    </div>
+                </div>
+
+                <div class="small-card">
+                    <img src="Group 296.jpg" alt="">
+                    <div class="content">
+                        <h2>Kids</h2>
+                        <p>Lorem Ipsum is simply dummy</p>
+                        <button>Discover More</button>
+                    </div>
+                </div>
+
+                <div class="small-card">
+                    <img src="Group 296.jpg" alt="">
+                    <div class="content">
+                        <h2>Shoes</h2>
+                        <p>Lorem Ipsum is simply dummy</p>
+                        <button>Discover More</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <div class="men">
+            <h1>Men's Latest</h1>
+            <p class="pass">
+                Lorem Ipsum is simply dummy text of the printingand typesetting industry.
+            </p>
+            <div class="imm">
+                <img src="Group 285.jpg" alt="">
+                <img src="Group 286.jpg" alt="">
+                <img src="Group 294 (2).jpg" alt="">
+               
+            </div>
+        </div>
+
+        <section class="products">
+            <div class="product-text">
+
+                <h1>Explore Our Products</h1>
+
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the
+                    1500s, when an unknown printer took a galley of type and scrambled it to make
+                    a type specimen book. It has survived not only five centuries, but also the leap
+                    into electronic typesetting, remaining essentially unchanged.
+                </p>
+
+                <p>
+                    It was popularised in the 1960s with the release of Letraset sheets containing
+                    Lorem Ipsum passages, and more recently with desktop publishing software like
+                    Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply
+                    <b>dummy text of the printing and typesetting industry.</b>
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                </p>
+
+                <p>
+                    It was popularised in the 1960s with the release of Letraset sheets containing
+                    Lorem Ipsum passages, and more recently with desktop publishing software like
+                    Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply
+                    <b>dummy text of the printing and typesetting industry.</b>
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type
+                    specimen book.
+                </p>
+
+            </div>
+            <div class="product-images">
+
+                <div class="product-card">
+                    <img src="Rectangle 98.jpg" alt="Leather Bags">
+
+                    <div class="image-text">
+                        <h2>Leather Bags</h2>
+                        <p>Lorem Ipsum is simply dummy text</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="Rectangle 98 (1).jpg" alt="Jewellery">
+                </div>
+
+
+                <div class="product-card">
+                    <img src="Rectangle 98 (2).jpg" alt="Fashion">
+                </div>
+
+
+                <div class="product-card">
+                    <img src="Rectangle 98 (3).jpg" alt="Different Types">
+
+                    <div class="image-text">
+                        <h2>Different Types</h2>
+                        <p>Lorem Ipsum is simply dummy text</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <div class="men">
+            <h1>Social Media</h1>
+            <p class="pass">
+                Lorem Ipsum is simply dummy text of the printingand typesetting industry.
+            </p>
+
+            <div class="image-container">
+                <img src="Rectangle 103.jpg" alt="">
+                <img src="Rectangle 103 (5).jpg" alt="">
+                <img src="Rectangle 103 (9).jpg" alt="">
+                <img src="Rectangle 103 (11).png" alt="">
+                <img src="Rectangle 103 (18).jpg" alt="">
+                <img src="Rectangle 103 (19).jpg" alt="">
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-column company">
+                    <div class="logo">
+
+                        <div>
+                            <img src=".vscode/Group_203-removebg-preview.png" alt="">
+                        </div>
+                    </div>
+
+                    <p><strong>Address:</strong> Lahore Road, Sheikhupura</p>
+                    <p><strong>E-mail:</strong> Example@gmail.com</p>
+                    <p><strong>Phone:</strong> 0092 356 3656210</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Shopping and Categories</h3>
+                    <a href="#">Men’s Shopping</a>
+                    <a href="#">Women’s Shopping</a>
+                    <a href="#">Kid’s Shopping</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Useful Links</h3>
+                    <a href="#">Homepage</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Help</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Help & Information</h3>
+                    <a href="#">FAQ’S</a>
+                    <a href="#">Shipping</a>
+                    <a href="#">Tracking Id</a>
+                </div>
+
+            </div>
+        </footer>
+    </body>
+
+</html>

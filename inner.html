@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="Slogan" href=".vscode/Screenshot 2026-07-27 172819.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+
+        }
+
+        header {
+
+            /* width:100%; */
+            height: 90px;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+            margin: 20 60px;
+        }
+
+        .search-box {
+            width: 650px;
+            height: 50px;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            background: #fff;
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 17px;
+            padding: 0 15px;
+        }
+
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .icon {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 18px;
+
+        }
+
+        .navbar {
+            background: #fff;
+            padding: 15px 0;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar ul li {
+            position: relative;
+            margin: 0 30px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 10px;
+
+        }
+
+        .navbar ul li a:hover {
+            color: blue;
+            border-bottom: 2px solid blue;
+            padding-bottom: 5px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            background: #fff;
+            min-width: 220px;
+            border-radius: 8px;
+            z-index: 1000;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px 20px;
+            color: #333;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .left {
+            width: 50%;
+            display: flex;
+            gap: 20px;
+        }
+
+        .thumbnails {
+            width: 90px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 80px 20px;
+        }
+
+        .thumbnails img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 0px 30px;
+
+        }
+
+        .thumbnails img:hover {
+            border: 2px solid #4db7d8;
+        }
+
+        .main-image {
+            flex: 1;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin: 40px 40px;
+
+
+            width: 600px;
+            height: 550px;
+            display: block;
+
+        }
+
+
+
+
+        .main-image img {
+            /* width:100%;
+    height: 100%; */
+            /* max-width:500%; */
+
+            width: 500px;
+            height: 500px;
+            display: block;
+
+        }
+
+
+        .right {
+            width: 50%;
+            margin: 50px 0px;
+
+        }
+
+        .right h1 {
+            font-size: 25px;
+            width: 130%;
+            margin-bottom: 20px;
+            margin: 0px 100px;
+        }
+
+        .price {
+            margin-bottom: 20px;
+            margin: 0px 100px;
+
+        }
+
+        .new-price {
+            font-size: 40px;
+            font-weight: bold;
+            margin: 0px 0px;
+        }
+
+        .old-price {
+            margin-left: 10px;
+            color: gray;
+            text-decoration: line-through;
+            margin: 0px 0px;
+        }
+
+        .offer {
+            display: flex;
+            gap: 50px;
+            margin-bottom: 25px;
+            margin: 0px 100px;
+        }
+
+        .offer span {
+            background: #e9f7fa;
+            padding: 8px 30px;
+            border-radius: 20px;
+            color: #0099aa;
+            font-size: 15px;
+
+        }
+
+        .right h3 {
+            margin-bottom: 10px;
+            margin: 10px 100px;
+            width: 200px;
+        }
+
+        .size {
+            margin: 0px 100px;
+            width: 550px;
+        }
+
+        .custom-box {
+            width: 600px;
+            background: #eef8fb;
+            padding: 0px;
+            border-radius: 15px;
+            margin: 0px 100px;
+        }
+
+        .custom-box h2 {
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        .product-item {
+            margin-bottom: 30px;
+        }
+
+        .title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .title span {
+            font-size: 22px;
+        }
+
+        .stock {
+            color: gray;
+            font-size: 18px;
+        }
+
+        select {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #f6a6b9;
+            border-radius: 10px;
+            font-size: 20px;
+            outline: none;
+            cursor: pointer;
+        }
+
+
+        .delivery {
+            width: 600px;
+            margin: 40px 100px;
+        }
+
+        .delivery-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .delivery-title h2 {
+            font-size: 30px;
+        }
+
+        .delivery-title a {
+            text-decoration: none;
+            color: #32b8d8;
+            font-size: 20px;
+        }
+
+        .pincode-box {
+            display: flex;
+            border: 1px solid #f6a6b9;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .pincode-box input {
+            flex: 1;
+            border: none;
+            padding: 18px;
+            font-size: 20px;
+            outline: none;
+        }
+
+        .pincode-box button {
+            width: 190px;
+            border: none;
+            background: white;
+            color: #32b8d8;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .bottom-bar {
+            width: 65%;
+            margin: 40px 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .price-box {
+            width: 380px;
+            height: 50px;
+            border: 1px solid #d9d9d9;
+            border-radius: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+        }
+
+        .price-box h2 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #001b44;
+            margin: 0;
+        }
+
+        .price-box p {
+            font-size: 14px;
+            color: #8a8a8a;
+            margin-top: 5px;
+        }
+
+        .cart-btn {
+            width: 300px;
+            height: 50px;
+            border: none;
+            border-radius: 40px;
+            background: linear-gradient(to right, #f79bb8, #eb5b8e);
+            color: #fff;
+            font-size: 20px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .cart-btn:hover {
+            background: linear-gradient(to right, #eb5b8e, #d9487d);
+            transform: scale(1.02);
+        }
+
+
+        .details-section {
+            width: 90%;
+            margin: 40px auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+
+        .lefts {
+            width: 68%;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 40px;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 25px;
+        }
+
+        .tabs a {
+            text-decoration: none;
+            color: #666;
+            font-size: 22px;
+            padding-bottom: 18px;
+        }
+
+        .tabs .active {
+            color: #000;
+            border-bottom: 3px solid #33b7e8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table tr {
+            border-bottom: 1px solid #eee;
+        }
+
+        table td {
+            padding: 24px 10px;
+            font-size: 22px;
+        }
+
+        table td:last-child {
+            text-align: right;
+        }
+
+        /* span {
+            color: #00bcd4;
+        }
+
+        del {
+            color: gray;
+            margin-right: 10px;
+        } */
+
+        .total td {
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .note {
+            margin-top: 120px;
+            color: #666;
+            font-size: 18px;
+        }
+
+        .rights {
+            width: 32%;
+            text-align: center;
+        }
+
+        .rights img {
+            width: 90%;
+        }
+
+        .rights p {
+            margin-top: 25px;
+            font-size: 20px;
+            line-height: 1.7;
+            color: #12395d;
+        }
+
+        .recommend {
+            width: 95%;
+            margin: 50px auto;
+        }
+
+        .recommend h2 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 500;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .recommend h2::after {
+
+            display: block;
+            width: 120px;
+            height: 3px;
+
+            margin: 15px auto 40px;
+        }
+
+        .product-container {
+            display: flex;
+            gap: 30px;
+
+
+
+        }
+
+        .card {
+            width: 300px;
+            background: #fff;
+
+            border-radius: 10px;
+            padding: 15px;
+            position: relative;
+            transition: .3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+            transform: translateY(-5px);
+        }
+
+        .heart {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 35px;
+            height: 35px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: #2ea7c7;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: contain;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin: 15px 0;
+            font-weight: 500;
+            color: #002244;
+        }
+
+        .price {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+
+        .card p {
+            color: #0d718f;
+            font-size: 20px;
+        }
+
+        .main-imag {
+            width: 500px;
+            
+        }
+
+        .main-imag img {
+            width: 1600px;
+            height: auto;
+            display: block;
+        }
+
+
+
+
+        footer {
+            background: #3b0505;
+            color: white;
+            padding: 60px 80px;
+            margin-top: 60px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        .footer-logo {
+            width: 180px;
+            margin-bottom: 20px;
+        }
+
+        .footer-box h2 {
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+
+        .footer-box a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin: 15px 0;
+            font-size: 20px;
+        }
+
+        .footer-box a:hover {
+            color: gold;
+        }
+
+        .khushi {
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+
+        <div class="logo">
+            <img src=".vscode/Screenshot 2026-07-27 172819.png" alt="Logo">
+        </div>
+
+        <div class="search-box">
+
+            <input type="text" placeholder="Search for rings">
+        </div>
+
+        <div class="header-icons">
+
+            <div class="icon">
+                <span>Wishlist</span>
+            </div>
+            <div class="icon">
+
+                <span>Cart</span>
+            </div>
+
+            <div class="icon">
+                <span>Login</span>
+            </div>
+
+        </div>
+
+    </header>
+
+    <nav class="navbar">
+        <ul>
+
+            <li><a href="jewellery.html">Home</a></li>
+
+            <li class="dropdown">
+                <a href="#">Products</a>
+
+                <div class="dropdown-content">
+                    <a href="rings.html">Rings</a>
+                    <a href="pendant.html">Pendant</a>
+                    <a href="mangalsutra.html">Mangalsutra</a>
+                    <a href="earring.html">Earring</a>
+                    <a href="chain.html">Chains</a>
+                </div>
+            </li>
+
+            <li><a href="about.html">About Us</a></li>
+
+            <li><a href="contact.html">Contact Us</a></li>
+
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="left">
+
+            <div class="thumbnails">
+                <img src=".vscode/Screenshot 2026-08-05 101953.png" alt="" onclick="changeImage(this)">
+                <img src=".vscode/Screenshot 2026-08-05 102006.png" alt="" onclick="changeImage(this)">
+                <img src=".vscode/Screenshot 2026-08-05 102017.png" alt="" onclick="changeImage(this)">
+                <img src=".vscode/Screenshot 2026-08-05 102040.png" alt="" onclick="changeImage(this)">
+            </div>
+
+            <div class="main-image">
+                
+                <img id="mainProductImg" src=".vscode/Screenshot 2026-08-05 120527.png" alt="">
+            </div>
+
+            <div class="khushi">
+                <div class="right">
+
+                    <h1>The Rebecca Diamond Silver Ring</h1>
+
+                    <div class="price">
+                        <span class="new-price">₹7,359</span>
+                        <span class="old-price">MRP ₹14,146</span>
+                    </div>
+
+                    <div class="offer">
+                        <span>50% on Making Charges</span>
+                        <span>50% on Diamond</span>
+                    </div>
+
+
+                    <h3>Select Size</h3>
+                    <div class="size">
+                        <select>
+                            <option>Select Size</option>
+                            <option>6</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="custom-box">
+
+                    <h2>Customise Product</h2>
+
+                    <div class="product-item">
+                        <div class="title">
+                            <span>Metal Color</span>
+                            <span class="stock">In stock</span>
+                        </div>
+
+                        <select>
+                            <option> Yellow</option>
+
+                        </select>
+                    </div>
+
+                    <div class="product-item">
+                        <div class="title">
+                            <span>Metal Purity</span>
+                            <span class="stock">In stock</span>
+                        </div>
+
+                        <select>
+                            <option>14KT</option>
+
+                        </select>
+                    </div>
+                    <div class="product-item">
+                        <div class="title">
+                            <span>Diamond</span>
+                            <span class="stock">In stock</span>
+                        </div>
+
+                        <select>
+                            <option> FG-VSSI</option>
+
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="delivery">
+
+                    <div class="delivery-title">
+                        <h2>Check Delivery Date</h2>
+                        <a href="#">Locate me</a>
+                    </div>
+
+                    <div class="pincode-box">
+                        <input type="text" placeholder=" Enter Pincode">
+                        <button>CHECK</button>
+                    </div>
+
+                </div>
+                <div class="bottom-bar">
+
+                    <div class="price-box">
+                        <h2>₹7,359</h2>
+                        <p>(inclusive of all taxes)</p>
+                    </div>
+
+
+                    <button class="cart-btn">Add to Cart</button>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- <div class="custom-box">
+
+    <h2>Customise Product</h2>
+
+    <div class="product-item">
+        <div class="title">
+            <span>Metal Color</span>
+            <span class="stock">In stock</span>
+        </div>
+
+        <select>
+            <option> Yellow</option>
+        
+        </select>
+    </div>
+
+    <div class="product-item">
+        <div class="title">
+            <span>Metal Purity</span>
+            <span class="stock">In stock</span>
+        </div>
+
+        <select>
+            <option>14KT</option>
+        
+        </select>
+    </div>
+    <div class="product-item">
+        <div class="title">
+            <span>Diamond</span>
+            <span class="stock">In stock</span>
+        </div>
+
+        <select>
+            <option> FG-VSSI</option>
+        
+        </select>
+    </div>
+
+</div>
+
+<div class="delivery">
+
+    <div class="delivery-title">
+        <h2>Check Delivery Date</h2>
+        <a href="#">Locate me</a>
+    </div>
+
+    <div class="pincode-box">
+        <input type="text" placeholder=" Enter Pincode">
+        <button>CHECK</button>
+    </div>
+
+</div>
+<div class="bottom-bar">
+
+    <div class="price-box">
+        <h2>₹7,359</h2>
+        <p>(inclusive of all taxes)</p>
+    </div>
+
+
+    <button class="cart-btn">Add to Cart</button>
+
+</div> -->
+        </section class="khushi1">
+
+        <div class="details-section">
+            <div class="lefts">
+
+                <div class="tabs">
+                    <a href="#" class="active">PRICE BREAKUP</a>
+                    <a href="#">PRODUCT DETAILS</a>
+                    <a href="#">GOLD DETAILS</a>
+                    <a href="#">DIAMOND DETAILS</a>
+                </div>
+
+                <table>
+
+                    <tr>
+                        <td>Gold:</td>
+                        <td>₹31,350</td>
+                    </tr>
+
+                    <tr>
+                        <td>Diamond <span>(25%)</span>:</td>
+                        <td>
+                            ₹95,040
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Making Charges:</td>
+                        <td>₹8,162</td>
+                    </tr>
+
+                    <tr>
+                        <td>GST (3%):</td>
+                        <td>₹4,037</td>
+                    </tr>
+
+                    <tr class="totals">
+                        <td>Total:</td>
+                        <td>₹1,38,589</td>
+                    </tr>
+
+                </table>
+
+                <p class="notes">
+                    * If there is any difference in metal weight, an additional payment or refund will be applicable.
+                </p>
+
+            </div>
+
+            <div class="rights">
+
+                <img src=".vscode/Screenshot 2026-08-05 120527.png" alt="Ring">
+
+                <p>
+                    Buy The Hildbrand Diamond Ring at PC Jeweller with BIS Hallmark
+                    Certified, 7 Day Return & Lifetime Exchange Policy.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="main-imag">
+          
+            <img src=".vscode/Screenshot 2026-08-05 143235.png" alt="">
+        </div>
+
+        <section class="recommend">
+
+            <h2>YOU MAY ALSO LIKE</h2>
+
+            <div class="product-container">
+
+                <a href="ring-sublime.html" class="card" style="text-decoration:none; color:inherit; display:block;">
+                    <span class="heart">♡</span>
+                    <img src=".vscode/Screenshot 2026-07-28 112933.png" alt="">
+                    <h3>The Ellyn Diamond & Gemstone Ring</h3>
+                    <span class="new">₹41,773</span>
+                    <p>8.5% off on product</p>
+                </a>
+
+                <a href="ring-slender.html" class="card" style="text-decoration:none; color:inherit; display:block;">
+                    <span class="heart">♡</span>
+                    <img src=".vscode/Screenshot 2026-07-28 112921.png" alt="">
+                    <h3>The GGR073910041 Gold Ring</h3>
+                    <span class="new">₹48,799</span>
+                    <p>15% off on making charges</p>
+                </a>
+
+                <a href="ring-unique.html" class="card" style="text-decoration:none; color:inherit; display:block;">
+                    <span class="heart">♡</span>
+                    <img src=".vscode/Screenshot 2026-07-28 112854.png" alt="">
+                    <h3>The Watch-Link Band Style Ring</h3>
+                    <span class="new">₹47,180</span>
+                    <p>11.4% off on product</p>
+                </a>
+
+                <a href="ring-bride.html" class="card" style="text-decoration:none; color:inherit; display:block;">
+                    <span class="heart">♡</span>
+                    <img src=".vscode/Screenshot 2026-07-28 112903.png" alt="">
+                    <h3>The Square Design Diamond Ring</h3>
+                    <span class="new">₹51,608</span>
+                    <p>13.5% off on product</p>
+                </a>
+                <a href="ring-women.html" class="card" style="text-decoration:none; color:inherit; display:block;">
+                    <span class="heart">♡</span>
+                    <img src=".vscode/Screenshot 2026-07-28 112651.png" alt="">
+                    <h3>The Ellyn Diamond & Gemstone Ring</h3>
+                    <span class="new">₹41,773</span>
+                    <p>8.5% off on product</p>
+                </a>
+
+            </div>
+
+
+        </section>
+
+
+        <div class="main-imag">
+            <img src=".vscode/Screenshot 2026-08-05 143816.png" alt="">
+        </div>
+
+
+        <footer>
+
+            <div class="footer-container">
+                <div class="footer-box">
+
+                    <img src=".vscode/Screenshot 2026-07-27 172819.png" class="footer-logo">
+
+                    <h2>Download the Jewellery App</h2>
+
+                    <div class="store">
+
+                        <img src=".vscode/Screenshot 2026-07-28 123136.png">
+
+                        <img src=".vscode/Screenshot 2026-07-28 123144.png">
+
+                    </div>
+
+                </div>
+
+
+                <div class="footer-box">
+
+                    <h2>Useful Links</h2>
+
+                    <a href="#">Delivery Information</a>
+                    <a href="#">International Shipping</a>
+                    <a href="#">Payment Options</a>
+                    <a href="#">Track Your Order</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Find a Store</a>
+
+                </div>
+                <div class="footer-box">
+
+                    <h2>Information</h2>
+
+                    <a href="#">Blog</a>
+                    <a href="#">Offers</a>
+                    <a href="#">Help & FAQs</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Privacy Policy</a>
+
+                </div>
+
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <h2>Follow Us</h2>
+
+                <p>© 2026 Jewellery Store. All Rights Reserved.</p>
+
+            </div>
+
+        </footer>
+
+    <script>
+        function changeImage(el) {
+            document.getElementById('mainProductImg').src = el.src;
+        }
+    </script>
+</body>
+
+</html>

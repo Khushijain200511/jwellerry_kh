@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Modern Sublime Double Halo Diamond Ring - Trending Jewellery</title>
+    <link rel="icon" href=".vscode/Screenshot 2026-07-27 172819.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #fff;
+            color: #333;
+        }
+
+        header {
+            height: 90px;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .search-box {
+            width: 650px;
+            height: 50px;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            background: #fff;
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 17px;
+            padding: 0 15px;
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .header-icons .icon a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .header-icons .icon a:hover {
+            color: #0099aa;
+        }
+
+        .navbar {
+            background: #fff;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar ul li {
+            position: relative;
+            margin: 0 30px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 10px;
+            transition: 0.2s;
+        }
+
+        .navbar ul li a:hover,
+        .navbar ul li a.active {
+            color: blue;
+            border-bottom: 2px solid blue;
+            padding-bottom: 5px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            background: #fff;
+            min-width: 220px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px 20px;
+            color: #333;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .dropdown-content a:hover {
+            background: #f8f9fa;
+            color: blue;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .breadcrumb {
+            width: 90%;
+            margin: 20px auto 10px;
+            font-size: 16px;
+            color: #777;
+        }
+
+        .breadcrumb a {
+            color: #555;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: #32b8d8;
+        }
+
+        .breadcrumb span {
+            color: #111;
+            font-weight: 600;
+        }
+
+        .product-page-container {
+            width: 90%;
+            margin: 20px auto 40px;
+            display: flex;
+            gap: 50px;
+        }
+
+        .gallery-side {
+            width: 50%;
+            display: flex;
+            gap: 25px;
+        }
+
+        .thumbnails {
+            width: 90px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .thumbnails img {
+            width: 85px;
+            height: 85px;
+            object-fit: cover;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .thumbnails img:hover,
+        .thumbnails img.active-thumb {
+            border-color: #32b8d8;
+            transform: scale(1.03);
+        }
+
+        .main-image {
+            flex: 1;
+            border: 1px solid #e8e8e8;
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            background: #fff;
+            height: 520px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .main-image img {
+            max-width: 100%;
+            max-height: 470px;
+            object-fit: contain;
+            border-radius: 12px;
+            transition: 0.3s ease;
+        }
+
+        .info-side {
+            width: 50%;
+        }
+
+        .info-side h1 {
+            font-size: 32px;
+            color: #1a1a1a;
+            font-weight: 600;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .price-section {
+            display: flex;
+            align-items: baseline;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .new-price {
+            font-size: 38px;
+            font-weight: bold;
+            color: #001b44;
+        }
+
+        .old-price {
+            font-size: 22px;
+            color: #888;
+            text-decoration: line-through;
+        }
+
+        .offer {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .offer span {
+            background: #e9f7fa;
+            padding: 8px 20px;
+            border-radius: 20px;
+            color: #0099aa;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .section-label {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .size-box {
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 25px;
+        }
+
+        select {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid #f6a6b9;
+            border-radius: 10px;
+            font-size: 18px;
+            outline: none;
+            background: #fff;
+            cursor: pointer;
+        }
+
+        .custom-box {
+            width: 100%;
+            max-width: 500px;
+            background: #eef8fb;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .custom-box h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #002244;
+        }
+
+        .product-item {
+            margin-bottom: 20px;
+        }
+
+        .product-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .title span {
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        .stock {
+            color: #28a745;
+            font-size: 15px;
+        }
+
+        .delivery {
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 30px;
+        }
+
+        .delivery-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .delivery-title h2 {
+            font-size: 22px;
+            color: #222;
+        }
+
+        .delivery-title a {
+            text-decoration: none;
+            color: #32b8d8;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .pincode-box {
+            display: flex;
+            border: 1px solid #f6a6b9;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .pincode-box input {
+            flex: 1;
+            border: none;
+            padding: 14px 18px;
+            font-size: 18px;
+            outline: none;
+        }
+
+        .pincode-box button {
+            width: 140px;
+            border: none;
+            background: #fff;
+            color: #32b8d8;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border-left: 1px solid #f6a6b9;
+            transition: 0.2s;
+        }
+
+        .pincode-box button:hover {
+            background: #32b8d8;
+            color: #fff;
+        }
+
+        .pincode-result {
+            margin-top: 8px;
+            font-size: 14px;
+        }
+
+        .bottom-bar {
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .price-box {
+            flex: 1;
+            height: 54px;
+            border: 1px solid #d9d9d9;
+            border-radius: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+        }
+
+        .price-box h2 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #001b44;
+            margin: 0;
+        }
+
+        .price-box p {
+            font-size: 12px;
+            color: #8a8a8a;
+            margin-top: 2px;
+        }
+
+        .cart-btn {
+            flex: 1;
+            height: 54px;
+            border: none;
+            border-radius: 40px;
+            background: linear-gradient(to right, #f79bb8, #eb5b8e);
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(235, 91, 142, 0.3);
+        }
+
+        .cart-btn:hover {
+            background: linear-gradient(to right, #eb5b8e, #d9487d);
+            transform: translateY(-2px);
+        }
+
+        .details-section {
+            width: 90%;
+            margin: 50px auto 40px;
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+            background: #fdfdfd;
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid #f0f0f0;
+        }
+
+        .lefts {
+            width: 65%;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 30px;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 25px;
+        }
+
+        .tabs a {
+            text-decoration: none;
+            color: #666;
+            font-size: 18px;
+            padding-bottom: 14px;
+            font-weight: 600;
+        }
+
+        .tabs .active {
+            color: #000;
+            border-bottom: 3px solid #33b7e8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table tr {
+            border-bottom: 1px solid #eee;
+        }
+
+        table td {
+            padding: 16px 10px;
+            font-size: 18px;
+        }
+
+        table td:last-child {
+            text-align: right;
+            font-weight: 500;
+        }
+
+        .totals td {
+            font-weight: bold;
+            font-size: 22px;
+            color: #001b44;
+            padding-top: 20px;
+        }
+
+        .notes {
+            margin-top: 25px;
+            color: #777;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .rights {
+            width: 35%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-left: 1px solid #eee;
+            padding-left: 30px;
+        }
+
+        .rights img {
+            width: 80%;
+            max-width: 250px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .rights p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #12395d;
+        }
+
+        .banner-wrap {
+            width: 90%;
+            margin: 40px auto;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .banner-wrap img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .recommend {
+            width: 90%;
+            margin: 50px auto;
+        }
+
+        .recommend h2 {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .recommend h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #32b8d8;
+            margin: 12px auto 35px;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            padding: 15px;
+            position: relative;
+            transition: .3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .1);
+            transform: translateY(-5px);
+        }
+
+        .heart {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            width: 32px;
+            height: 32px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: #2ea7c7;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            font-size: 16px;
+            margin: 12px 0 8px;
+            font-weight: 600;
+            color: #002244;
+            line-height: 1.3;
+        }
+
+        .card .new {
+            font-size: 18px;
+            font-weight: bold;
+            color: #222;
+        }
+
+        .card p {
+            color: #0d718f;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        footer {
+            background: #3b0505;
+            color: white;
+            padding: 60px 80px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        .footer-logo {
+            width: 180px;
+            margin-bottom: 20px;
+        }
+
+        .footer-box h2 {
+            margin-bottom: 20px;
+            font-size: 26px;
+        }
+
+        .footer-box a {
+            display: block;
+            color: #eee;
+            text-decoration: none;
+            margin: 12px 0;
+            font-size: 17px;
+            transition: 0.2s;
+        }
+
+        .footer-box a:hover {
+            color: gold;
+        }
+
+        .store {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .store img {
+            height: 45px;
+            cursor: pointer;
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            text-align: center;
+            font-size: 15px;
+            color: #ccc;
+        }
+
+        @media (max-width: 1024px) {
+            .product-page-container {
+                flex-direction: column;
+            }
+            .gallery-side, .info-side {
+                width: 100%;
+            }
+            .product-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="jewellery.html">
+                <img src=".vscode/Screenshot 2026-07-27 172819.png" alt="Logo">
+            </a>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search for rings, earrings, pendants...">
+        </div>
+
+        <div class="header-icons">
+            <div class="icon">
+                <a href="wish.html">
+                    <span>♡</span>
+                    <span>Wishlist</span>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="cart.html">
+                    <span>🛒</span>
+                    <span>Cart</span>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="login.html">
+                    <span>👤</span>
+                    <span>Login</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="jewellery.html">Home</a></li>
+            <li class="dropdown">
+                <a href="rings.html" class="active">Products</a>
+                <div class="dropdown-content">
+                    <a href="rings.html">Rings</a>
+                    <a href="pendant.html">Pendant</a>
+                    <a href="mangalsutra.html">Mangalsutra</a>
+                    <a href="earring.html">Earring</a>
+                    <a href="chain.html">Chains</a>
+                </div>
+            </li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="breadcrumb">
+        <a href="jewellery.html">Home</a> &nbsp;/&nbsp;
+        <a href="rings.html">Trending Rings</a> &nbsp;/&nbsp;
+        <span>The Modern Sublime Double Halo Diamond Ring</span>
+    </div>
+
+    <div class="product-page-container">
+        <div class="gallery-side">
+            <div class="thumbnails">
+                <img src=".vscode/Screenshot 2026-07-28 112933.png" alt="Thumbnail 1" class="active-thumb" onclick="changeImage(this)">
+                <img src=".vscode/Screenshot 2026-07-28 112921.png" alt="Thumbnail 2" onclick="changeImage(this)">
+                <img src=".vscode/Screenshot 2026-07-28 112740.png" alt="Thumbnail 3" onclick="changeImage(this)">
+                <img src=".vscode/Screenshot 2026-08-05 120527.png" alt="Thumbnail 4" onclick="changeImage(this)">
+            </div>
+
+            <div class="main-image">
+                <img id="mainProductImg" src=".vscode/Screenshot 2026-07-28 112933.png" alt="The Modern Sublime Double Halo Diamond Ring">
+            </div>
+        </div>
+
+        <div class="info-side">
+            <h1>The Modern Sublime Double Halo Diamond Ring</h1>
+
+            <div class="price-section">
+                <span class="new-price">₹41,773</span>
+                <span class="old-price">MRP ₹58,990</span>
+            </div>
+
+            <div class="offer">
+                <span>8.5% off on product</span>
+                <span>50% off on Diamond Making</span>
+            </div>
+
+            <div class="size-box">
+                <div class="section-label">Select Ring Size</div>
+                <select>
+                    <option>Size 6 (16.5 mm)</option>
+                    <option>Size 7 (17.3 mm)</option>
+                    <option>Size 8 (18.1 mm)</option>
+                    <option>Size 9 (18.9 mm)</option>
+                    <option>Size 10 (19.8 mm)</option>
+                </select>
+            </div>
+
+            <div class="custom-box">
+                <h2>Customise Product</h2>
+
+                <div class="product-item">
+                    <div class="title">
+                        <span>Metal Color</span>
+                        <span class="stock">In stock</span>
+                    </div>
+                    <select>
+                        <option>White Gold (Platinum Finish)</option>
+                        <option>Yellow Gold</option>
+                        <option>Rose Gold</option>
+                    </select>
+                </div>
+
+                <div class="product-item">
+                    <div class="title">
+                        <span>Metal Purity</span>
+                        <span class="stock">In stock</span>
+                    </div>
+                    <select>
+                        <option>18KT BIS Hallmarked</option>
+                        <option>14KT BIS Hallmarked</option>
+                    </select>
+                </div>
+
+                <div class="product-item">
+                    <div class="title">
+                        <span>Diamond Grade</span>
+                        <span class="stock">In stock</span>
+                    </div>
+                    <select>
+                        <option>EF-VVS (IGI Certified High Sparkle)</option>
+                        <option>FG-VSSI (IGI Certified)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="delivery">
+                <div class="delivery-title">
+                    <h2>Check Delivery Date</h2>
+                    <a href="javascript:void(0)" onclick="document.getElementById('pincodeInput').value='110001'; checkPincode();">Locate me</a>
+                </div>
+                <div class="pincode-box">
+                    <input type="text" id="pincodeInput" placeholder="Enter 6-digit Pincode">
+                    <button onclick="checkPincode()">CHECK</button>
+                </div>
+                <div id="pincodeResult" class="pincode-result"></div>
+            </div>
+
+            <div class="bottom-bar">
+                <div class="price-box">
+                    <h2>₹41,773</h2>
+                    <p>(inclusive of all taxes)</p>
+                </div>
+                <button class="cart-btn" onclick="alert('The Modern Sublime Double Halo Diamond Ring added to cart!')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="details-section">
+        <div class="lefts">
+            <div class="tabs">
+                <a href="javascript:void(0)" class="active">PRICE BREAKUP</a>
+                <a href="javascript:void(0)">PRODUCT DETAILS</a>
+                <a href="javascript:void(0)">GOLD DETAILS</a>
+                <a href="javascript:void(0)">DIAMOND DETAILS</a>
+            </div>
+
+            <table>
+                <tr>
+                    <td>Gold (18KT White & Yellow Gold, 4.0g):</td>
+                    <td>₹24,000</td>
+                </tr>
+                <tr>
+                    <td>Diamond (0.72 Ct EF-VVS Double Halo):</td>
+                    <td>₹41,773</td>
+                </tr>
+                <tr>
+                    <td>Making Charges:</td>
+                    <td>₹4,800</td>
+                </tr>
+                <tr>
+                    <td>GST (3%):</td>
+                    <td>₹2,117</td>
+                </tr>
+                <tr class="totals">
+                    <td>Total Price:</td>
+                    <td>₹72,690</td>
+                </tr>
+            </table>
+
+            <p class="notes">
+                * If there is any difference in metal weight upon crafting, an additional payment or refund will be applicable based on live gold rates.
+            </p>
+        </div>
+
+        <div class="rights">
+            <img src=".vscode/Screenshot 2026-07-28 112933.png" alt="Ring Guarantee">
+            <p>
+                Buy The Modern Sublime Double Halo Diamond Ring with 100% BIS Hallmark Certification, IGI Diamond Certificate, 7-Day Return & Lifetime Exchange Guarantee.
+            </p>
+        </div>
+    </div>
+
+    <div class="banner-wrap">
+        <img src=".vscode/Screenshot 2026-08-05 143235.png" alt="Promotional Banner">
+    </div>
+
+    <section class="recommend">
+        <h2>YOU MAY ALSO LIKE</h2>
+        <div class="product-container">
+            <a href="ring-slender.html" class="card">
+                <span class="heart">♡</span>
+                <img src=".vscode/Screenshot 2026-07-28 112921.png" alt="Slender Radiant Gold">
+                <h3>Slender Radiant Sphere Open Ring</h3>
+                <span class="new">₹34,500</span>
+                <p>Modern silhouette</p>
+            </a>
+
+            <a href="ring-festive.html" class="card">
+                <span class="heart">♡</span>
+                <img src=".vscode/Screenshot 2026-07-28 112740.png" alt="Festive Outfit Accessories">
+                <h3>Festive Radiant Crown Diamond Ring</h3>
+                <span class="new">₹32,800</span>
+                <p>Special festive price</p>
+            </a>
+
+            <a href="ring-women.html" class="card">
+                <span class="heart">♡</span>
+                <img src=".vscode/Screenshot 2026-07-28 112705.png" alt="For Women">
+                <h3>The Solitaire Oval Diamond Ring</h3>
+                <span class="new">₹18,450</span>
+                <p>36% off</p>
+            </a>
+
+            <a href="ring-unique.html" class="card">
+                <span class="heart">♡</span>
+                <img src=".vscode/Screenshot 2026-07-28 112854.png" alt="Unique Jewellery">
+                <h3>Nature Leaf & Gemstone Ring</h3>
+                <span class="new">₹24,750</span>
+                <p>Artisan crafted</p>
+            </a>
+
+            <a href="inner.html" class="card">
+                <span class="heart">♡</span>
+                <img src=".vscode/Screenshot 2026-08-06 101909.png" alt="Minimal Gold">
+                <h3>The Rebecca Minimal Gold Diamond Ring</h3>
+                <span class="new">₹7,359</span>
+                <p>50% off on making</p>
+            </a>
+        </div>
+    </section>
+
+    <div class="banner-wrap">
+        <img src=".vscode/Screenshot 2026-08-05 143816.png" alt="Jewellery Collection Banner">
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-box">
+                <img src=".vscode/Screenshot 2026-07-27 172819.png" class="footer-logo" alt="Footer Logo">
+                <h2>Download the Jewellery App</h2>
+                <div class="store">
+                    <img src=".vscode/Screenshot 2026-07-28 123136.png" alt="Google Play">
+                    <img src=".vscode/Screenshot 2026-07-28 123144.png" alt="App Store">
+                </div>
+            </div>
+
+            <div class="footer-box">
+                <h2>Useful Links</h2>
+                <a href="Delivery.html">Delivery Information</a>
+                <a href="#">International Shipping</a>
+                <a href="payment.html">Payment Options</a>
+                <a href="track.html">Track Your Order</a>
+                <a href="return.html">Returns</a>
+                <a href="find.html">Find a Store</a>
+            </div>
+
+            <div class="footer-box">
+                <h2>Information</h2>
+                <a href="blog.html">Blog</a>
+                <a href="offers.html">Offers</a>
+                <a href="help.html">Help & FAQs</a>
+                <a href="about.html">About Us</a>
+                <a href="pri.html">Privacy Policy</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Jewellery Store. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function changeImage(el) {
+            document.getElementById('mainProductImg').src = el.src;
+            document.querySelectorAll('.thumbnails img').forEach(img => img.classList.remove('active-thumb'));
+            el.classList.add('active-thumb');
+        }
+
+        function checkPincode() {
+            const pin = document.getElementById('pincodeInput').value.trim();
+            const result = document.getElementById('pincodeResult');
+            if (/^\d{6}$/.test(pin)) {
+                result.innerHTML = `<span style="color: #28a745; font-weight: 600;">✓ Delivery available within 3-4 business days for PIN ${pin} (Free Express Shipping)</span>`;
+            } else {
+                result.innerHTML = `<span style="color: #d9534f; font-weight: 500;">Please enter a valid 6-digit postal pincode.</span>`;
+            }
+        }
+    </script>
+</body>
+
+</html>

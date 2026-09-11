@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewellery</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: white;
+        }
+
+       
+        header{
+    width:100%;
+    height:90px;
+    background:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 40px;
+    
+}
+header{
+    width:100%;
+    height:90px;
+    background:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 40px;
+    
+}
+
+.logo img{
+    width:150px;
+    height:auto;
+    margin: 20 60px;
+}
+
+.search-box{
+    width:650px;
+    height:50px;
+    border:1px solid #ccc;
+    border-radius:30px;
+    display:flex;
+    align-items:center;
+    padding:0 20px;
+    background:#fff;
+}
+
+.search-box input{
+    flex:1;
+    border:none;
+    outline:none;
+    font-size:17px;
+    padding:0 15px;
+}
+
+
+.header-icons{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.icon{
+    display:flex;
+    align-items:center;
+    cursor:pointer;
+}
+.search-box input{
+    flex:1;
+    border:none;
+    outline:none;
+    font-size:18px;
+   
+}
+.navbar{
+    background:#fff;
+    padding:15px 0;
+}
+
+.navbar ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.navbar ul li{
+    position:relative;
+    margin:0 30px;
+}
+
+.navbar ul li a{
+    text-decoration:none;
+    color:#333;
+    font-size:18px;
+    font-weight:600;
+    padding:10px;
+    
+}
+
+.navbar ul li a:hover{
+    color:blue;
+    border-bottom:2px solid blue;
+    padding-bottom:5px;
+}
+.dropdown-content{
+    display:none;
+    position:absolute;
+    top:100%;
+    background:#fff;
+    min-width:220px;
+    border-radius:8px;
+    z-index:1000;
+}
+
+.dropdown-content a{
+    display:block;
+    padding:12px 20px;
+    color:#333;
+}
+
+.dropdown:hover .dropdown-content{
+    display:block;
+
+}
+
+
+.profile{
+    width:330px;
+   
+    padding:30px;
+    
+    margin: 50px 20px;
+}
+
+.top{
+   
+    align-items:center;
+    gap:20px;
+    margin-bottom:35px 500px;
+    padding: 0px 300px;
+    margin: 20px 0px;
+}
+
+.profile-img{
+    width:100px;
+    height:100px;
+    background:#f7f7f7;
+    border-radius:50%;
+   
+    justify-content:center;
+    align-items:center;
+}
+
+.profile-img i{
+    font-size:48px;
+    color:#4fa8c6;
+}
+
+.top h2{
+    font-size:32px;
+    color:#111;
+    font-weight:400;
+}
+
+.top span{
+    text-transform:capitalize;
+}
+
+.item{
+    padding:22px 300px;
+    border-bottom:1px solid #e6e6e6;
+}
+
+.item:last-child{
+    border-bottom:none;
+}
+
+.item h3{
+    font-size:18px;
+    color:#111;
+    margin-bottom:15px;
+    font-weight:500;
+}
+
+.item p{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:18px;
+    color:#333;
+}
+
+.sidebar{
+    width:340px;
+    background:#fff;
+    padding:40px 35px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    margin: 20px 40px; 
+   
+}
+.pro{
+    display:flex
+    
+}
+
+.sidebar h1{
+    font-size:22px;
+    font-weight:500;
+    color:#222;
+    margin-bottom:30px;
+}
+
+.welcome{
+    font-size:18px;
+    color:#4da3c3;
+    margin-bottom:50px;
+}
+
+.welcome span{
+    color:#4da3c3;
+    font-weight:500;
+}
+
+.menu{
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#2fa6c7;
+    font-size:18px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    transition:.3s;
+}
+
+.menu a i{
+    color:#2fa6c7;
+    font-size:22px;
+    width:25px;
+}
+
+.menu a.active{
+    color:#222;
+    font-weight:500;
+}
+
+.menu a:hover{
+    color:#222;
+}
+
+.logout{
+    margin-top:90px;
+}
+
+.logout a{
+    text-decoration:none;
+    font-size:20px;
+    color:#222;
+    font-weight:500;
+}
+
+.logout a:hover{
+    color:#2fa6c7;
+}
+
+
+    
+
+footer{
+    background:#3b0505;
+    color:white;
+    padding:60px 80px;
+    margin-top:60px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:50px;
+}
+
+.footer-logo{
+    width:180px;
+    margin-bottom:20px;
+}
+
+.footer-box h2{
+    margin-bottom:20px;
+    font-size:32px;
+}
+
+.footer-box a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    margin:15px 0;
+    font-size:20px;
+}
+
+.footer-box a:hover{
+    color:gold;
+}
+
+</style>
+
+</head>
+<body>
+    <header>
+       
+
+    <div class="logo">
+        <img src=".vscode/Screenshot 2026-07-27 172819.png" alt="Logo">
+    </div>
+
+    <div class="search-box">
+       
+        <input type="text" placeholder="Search for rings">
+    </div>
+
+    <div class="header-icons">
+
+        <div class="icon"> 
+            <span>Wishlist</span>
+        </div>
+   <div class="icon">
+        
+            <span>Cart</span>
+        </div>
+
+        <div class="icon">
+            <span>Login</span>
+        </div>
+
+    </div>
+
+</header>
+<nav class="navbar">
+    <ul>
+
+        <li><a href="jewellery.html">Home</a></li>
+
+        <li class="dropdown">
+            <a href="#">Products</a>
+
+            <div class="dropdown-content">
+                <a href="rings.html">Rings</a>
+                <a href="pendant.html">Pendant</a>
+                <a href="mangalsutra.html">Mangalsutra</a>
+                <a href="earring.html">Earring</a>
+                <a href="chain.html">Chains</a>
+            </div>
+        </li>
+
+        <li><a href="about.html">About Us</a></li>
+
+        <li><a href="contact.html">Contact Us</a></li>
+
+    </ul>
+</nav>
+<div class="pro">
+ <div class="sidebar">
+
+    <h1>ACCOUNT</h1>
+
+    <p class="welcome">
+        Hey! <span>KHUSHI JAIN</span>
+    </p>
+
+    <div class="menu">
+
+        <a href="#" class="active">
+            <i class="fa-regular fa-user"></i>
+            My Profile
+        </a>
+
+        <a href="#">
+            <i class="fa-solid fa-cube"></i>
+            Order History
+        </a>
+
+        <a href="#">
+            <i class="fa-solid fa-location-dot"></i>
+            Address
+        </a>
+
+        <a href="#">
+            <i class="fa-regular fa-circle-question"></i>
+            Help Center
+        </a>
+
+    </div>
+
+    <div class="logout">
+        <a href="#">LOGOUT</a>
+    </div>
+ </div>
+
+ <div>
+    <div class="top">
+        <div class="profile-img">
+            <i class="fa-regular fa-user"></i>
+            <img src=".vscode/Screenshot 2026-08-06 174413.png" alt="">
+        </div>
+
+        <h2>Hey,Khushi</h2>
+    </div>
+
+    <div class="info">
+
+        <div class="item">
+            <h3>Name</h3>
+            <p>
+               
+                khushi jain
+            </p>
+        </div>
+
+        <div class="item">
+            <h3>Email ID</h3>
+            <p>
+                
+                khushijainkekri@gmail.com
+            </p>
+        </div>
+
+        <div class="item">
+            <h3>Phone Number</h3>
+            <p>
+                
+                9530309895
+            </p>
+        </div>
+
+        <div class="item">
+            <h3>Date of Birth</h3>
+            <p>
+                
+                11 Jun 2005
+            </p>
+        </div>
+
+    </div>
+ </div>
+ </div>
+ </div>
+ 
+<footer>
+
+    <div class="footer-container">
+        <div class="footer-box">
+
+            <img src=".vscode/Screenshot 2026-07-27 172819.png" class="footer-logo">
+
+            <h2>Download the Jewellery App</h2>
+
+            <div class="store">
+
+                <img src=".vscode/Screenshot 2026-07-28 123136.png">
+
+                <img src=".vscode/Screenshot 2026-07-28 123144.png">
+
+            </div>
+
+        </div>
+        <div class="footer-box">
+
+            <h2>Useful Links</h2>
+
+            <a href="#">Delivery Information</a>
+            <a href="#">International Shipping</a>
+            <a href="#">Payment Options</a>
+            <a href="#">Track Your Order</a>
+            <a href="#">Returns</a>
+            <a href="#">Find a Store</a>
+
+        </div>
+        <div class="footer-box">
+
+            <h2>Information</h2>
+
+            <a href="#">Blog</a>
+            <a href="#">Offers</a>
+            <a href="#">Help & FAQs</a>
+            <a href="#">About Us</a>
+            <a href="#">Privacy Policy</a>
+
+        </div>
+        
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <h2>Follow Us</h2>
+
+        <p>© 2026 Jewellery Store. All Rights Reserved.</p>
+
+    </div>
+
+</footer>
+
+
+
+</body>
+
+</html>
+
+
